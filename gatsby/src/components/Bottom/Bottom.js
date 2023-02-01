@@ -26,6 +26,9 @@ const Bottom = () => {
 
     return(
         <ContainerBottom>
+            <div className="next">
+                <p>Full Website Coming Soon</p>
+            </div>
             <SliderContainer  {...settings}>
                 
                     <Slide
@@ -65,6 +68,21 @@ const ContainerBottom = styled.section`
     height: 100vh;
     position: relative;
     z-index: -1;
+    .next {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        z-index: 1;
+        color: white;
+        font-size: 1.5rem;
+        @media (max-width: 750px) {
+            bottom: 0;
+            right:auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50px;
+        }
+    }
 `
 
 
