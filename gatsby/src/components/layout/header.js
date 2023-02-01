@@ -29,10 +29,10 @@ const Header = () => {
                     <button onMouseEnter={() => setAbout(true)} onMouseLeave={() => setAbout(false)}  >About</button>
                 </li>
                 <li>
-                    <a href="mailto:hello@nevada.com">Contact</a>
+                    <a href="mailto:hello@nevadaprojects.com">Contact</a>
                 </li>
                 <li>
-                    <a rel="noreferrer" target='_blank' href="https://instagram.com">Follow</a>
+                    <a rel="noreferrer" target='_blank' href="https://instagram.com/nevada.projects">Follow</a>
                 </li>
             </ul>
             <div className="logo">
