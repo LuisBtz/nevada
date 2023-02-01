@@ -1,0 +1,35 @@
+{
+  "name": "nevada",
+  "version": "1.0.0",
+  "private": true,
+  "description": "nevada",
+  "author": "Luis B.",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@win11react/react-canvas-draw": "^1.2.2",
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
+    "gatsby-plugin-styled-components": "^6.5.0",
+    "gatsby-source-filesystem": "^5.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "mouseee": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6"
+  }
+}
