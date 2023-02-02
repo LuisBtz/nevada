@@ -17,8 +17,8 @@ const Header = () => {
         <HeaderContainer>
           <div className={about ? 'aboutPage show' : 'aboutPage'}>
             <div className="texto">
-              <p>We are a Design & Art Studio specialized on creating and shaping ambitious brands within a culturally relevant vision.</p>
-              <p>Coming Soon.</p>
+              <p>Somos un estudio de Diseño & Arte especializado en crear y dar forma a marcas y compañías que comparten una visión culturalmente relevante.</p>
+              <p>Próximamente</p>
             </div>
             <div className="abajo">
               
@@ -58,7 +58,7 @@ position: relative;
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: #FF4000;
+      background-color: #FF1C00;
       transition: opacity 350ms ease-in-out;
       .texto {
         max-width: 60%;
@@ -87,10 +87,13 @@ position: relative;
         transform: translateX(-50%);
         width: 300px;
         justify-content: space-between;
+        @media screen and (max-width: 750px) {
+          top: 20px;
+        }
         li {
             span, button, a {
                 font-size: 1.5rem;
-
+                color: black;
                 &:hover {
                     font-family: var(--bold);
                 }
@@ -109,6 +112,9 @@ position: relative;
         top: calc(100% - 460px);
         padding: 20px;
         transition: all 1s linear;
+        @media (max-width: 750px) {
+          top: calc(70% - 360px);
+        }
       }
   }
   .logo #img.shrink {
@@ -118,8 +124,12 @@ position: relative;
     left: 0;
     transition: all 1s linear;
 
-      @media screen and (max-width: 768px) {
-        top: 18px;
+      @media screen and (max-width: 750px) {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+        height: 70px;
+        width: 150px;
       }
   }
 `

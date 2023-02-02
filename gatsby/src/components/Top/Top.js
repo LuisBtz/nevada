@@ -14,7 +14,7 @@ const Top = () => {
                 hideGrid={true}
                 lazyRadius= {5}
                 brushRadius= {60}
-                brushColor="rgba(255, 64, 0, 1)"
+                brushColor="#FF1C00"
                 catenaryColor="rgba(0,0,0,0)"
             />
         </ContainerTop>
@@ -22,10 +22,13 @@ const Top = () => {
 }
 
 const ContainerTop = styled.section`
-    cursor:url('/cursor.svg') 60 50, auto;
     height: 100vh;
     width: 100%;
     position: relative;
+    @media (max-width: 750px) {
+        height: 70vh;
+        overflow: hidden;
+    }
     div {
         background-color: transparent !important;
     }
