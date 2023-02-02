@@ -15,7 +15,7 @@ const IndexPage = () => {
 
 
 export const Head = () => (
-  <Seo title='Nevada Cooming Soon' description='Full website soon' image='/screenshot.png' />
+  <Seo title='Nevada Projects' description='Full website soon' image='/screenshot.png' />
   )
 
 

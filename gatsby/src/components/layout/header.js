@@ -26,13 +26,13 @@ const Header = () => {
           </div>
             <ul>
                 <li className="about">
-                    <button onMouseEnter={() => setAbout(true)} onMouseLeave={() => setAbout(false)}  >About</button>
+                    <button onMouseEnter={() => setAbout(true)} onMouseLeave={() => setAbout(false)}  >Nosotros</button>
                 </li>
                 <li>
-                    <a href="mailto:hello@nevadaprojects.com">Contact</a>
+                    <a href="mailto:hello@nevadaprojects.com">Contacto</a>
                 </li>
                 <li>
-                    <a rel="noreferrer" target='_blank' href="https://instagram.com/nevada.projects">Follow</a>
+                    <a rel="noreferrer" target='_blank' href="https://instagram.com/nevada.projects">Redes</a>
                 </li>
             </ul>
             <div className="logo">
@@ -85,7 +85,7 @@ position: relative;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
-        width: 300px;
+        width: 350px;
         justify-content: space-between;
         @media screen and (max-width: 750px) {
           top: 20px;

@@ -115,7 +115,8 @@ const Bottom = () => {
                             <h2>nevada <span>desarrolla soluciones.</span></h2>
                         </div>
                     </Slide>
-                    <Slide
+                    
+                    {/* <Slide
                         className='slide'
                     >
                         <StaticImage 
@@ -128,7 +129,7 @@ const Bottom = () => {
                         <div className="titulo">
                         <h2>nevada <span>es una señal.</span></h2>
                         </div>
-                    </Slide>
+                    </Slide> */}
                     <Slide
                         className='slide'
                     >
@@ -308,19 +309,21 @@ const ContainerBottom = styled.section`
     z-index: -1;
     .next {
         position: absolute;
-        bottom: 50px;
+        bottom: 95px;
         right: 50px;
         z-index: 1;
         color: white;
         font-size: 1.5rem;
         text-align: center;
         mix-blend-mode: difference;
+        line-height: 0;
         @media (max-width: 750px) {
             bottom: 0;
             right:auto;
             left: 50%;
             transform: translateX(-50%);
             top: 50px;
+            line-height: normal;
         }
     }
 `
@@ -338,7 +341,7 @@ position: relative;
 height: 100vh;
 .titulo {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: 50px;
     h2 {
         font-family: var(--bold);
@@ -346,6 +349,7 @@ height: 100vh;
         font-size: 5vw;
         letter-spacing: -2px;
         mix-blend-mode: difference;
+        line-height: 0;
         span {
             font-family: var(--light);
         }
