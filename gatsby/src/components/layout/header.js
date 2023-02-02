@@ -113,7 +113,7 @@ position: relative;
         padding: 20px;
         transition: all 1s linear;
         @media (max-width: 750px) {
-          top: calc(70% - 360px);
+          top: calc(70% - 300px);
         }
       }
   }
