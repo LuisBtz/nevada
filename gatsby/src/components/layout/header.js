@@ -111,9 +111,10 @@ position: relative;
         position: fixed;
         top: calc(100% - 460px);
         padding: 20px;
-        transition: all 1s linear;
+        transition: all 1s ease-in-out;
         @media (max-width: 750px) {
-          top: calc(70% - 300px);
+          top: calc(70% - 300px) !important;
+          transform: translateX(0) !important;
         }
       }
   }
@@ -122,14 +123,12 @@ position: relative;
     width: 120px;
     top: 0px;
     left: 0;
-    transition: all 1s linear;
+    transition: all 1s ease-in-out;
 
       @media screen and (max-width: 750px) {
-        left: 50%;
-        transform: translateX(-50%);
-        top: 50px;
-        height: 70px;
-        width: 150px;
+        top: 50px !important;
+        height: 70px !important;
+        width: 150px !important;
       }
   }
 `
