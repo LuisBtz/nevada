@@ -314,6 +314,7 @@ const ContainerBottom = styled.section`
         color: white;
         font-size: 1.5rem;
         text-align: center;
+        mix-blend-mode: difference;
         @media (max-width: 750px) {
             bottom: 0;
             right:auto;
@@ -344,6 +345,7 @@ height: 100vh;
         color: white;
         font-size: 5vw;
         letter-spacing: -2px;
+        mix-blend-mode: difference;
         span {
             font-family: var(--light);
         }

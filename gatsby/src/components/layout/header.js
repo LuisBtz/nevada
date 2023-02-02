@@ -105,6 +105,7 @@ position: relative;
     justify-self: center;
     line-height: 0;
     width: auto;
+    
       #img {
         height: 450px;
         width: 100%;
