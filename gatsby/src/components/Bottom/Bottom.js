@@ -313,6 +313,7 @@ const ContainerBottom = styled.section`
         z-index: 1;
         color: white;
         font-size: 1.5rem;
+        text-align: center;
         @media (max-width: 750px) {
             bottom: 0;
             right:auto;
@@ -345,6 +346,9 @@ height: 100vh;
         letter-spacing: -2px;
         span {
             font-family: var(--light);
+        }
+        @media (max-width: 750px) {
+            font-size: 1.5rem;
         }
     }
 }
