@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
+import Typed from "react-typed"
 
 const Bottom = () => {
 
@@ -15,7 +16,7 @@ const Bottom = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 6000,
         pauseOnHover: false,
         speed: 500,
       };
@@ -28,151 +29,113 @@ const Bottom = () => {
             <div className="next">
                 <p>Página Web Próximamente</p>
             </div>
+            <div className="overlay"></div>
+            <Typed
+                className="text"
+                strings={[
+                        "es una señal.",
+                        "encuentra claridad.",
+                        "busca lo esencial.",
+                        "es simple y directo.",
+                        "es colaboración creativa.",
+                        "desarrolla soluciones.",
+                    ]}
+                    typeSpeed={50}
+                    backSpeed={50}
+                    backDelay={5000}
+                    loop
+            />
             <SliderContainer  {...settings}>
                 
                     <Slide
                         className='slide'
                     >
                         <img src="/images/01.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es una señal.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/02.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>encuentra claridad.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/03.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>busca lo esencial.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/04.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es simple y directo.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/05.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es colaboración creativa.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                          <img src="/images/06.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>desarrolla soluciones.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/07.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>encuentra claridad.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/09.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>busca lo esencial.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/10.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es simple y directo.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/11.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es colaboración creativa.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/12.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>desarrolla soluciones.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/13.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es una señal.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/14.jpg" alt="Nevada" />
-                        <div className="titulo">
-                        <h2>nevada <span>encuentra claridad.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/15.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>busca lo esencial.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/16.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>es simple y directo.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/17.jpg" alt="Nevada" />
-                        <div className="titulo">
-                        <h2>nevada <span>es colaboración creativa.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/18.jpg" alt="Nevada" />
-                        <div className="titulo">
-                            <h2>nevada <span>desarrolla soluciones.</span></h2>
-                        </div>
                     </Slide>
                     <Slide
                         className='slide'
                     >
                         <img src="/images/19.jpg" alt="Nevada" />
-                        <div className="titulo">
-                        <h2>nevada <span>es una señal.</span></h2>
-                        </div>
                     </Slide>
             </SliderContainer>
         </ContainerBottom>
@@ -182,20 +145,51 @@ const Bottom = () => {
 const ContainerBottom = styled.section`
     height: 100vh;
     position: relative;
-    z-index: -1;
+    z-index: -2;
     scroll-snap-align: start;
+    overflow-y: hidden;
+    .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.35);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .text {
+        position: absolute;
+        bottom: 68px;
+        left: 175px;
+        color: white;
+        z-index: 1;
+        @media (max-width: 990px) {
+            left: 140px;
+            bottom: 66px;
+        }
+        span {
+            font-size: 47px;
+            line-height: 0;
+            font-family: var(--light);
+            letter-spacing: -1px;
+            @media (max-width: 990px) {
+                font-size: 37px;
+            }
+        }
+    }
     .next {
         position: absolute;
-        bottom: 95px;
+        bottom: 65px;
+        padding-bottom: 13px;
         right: 50px;
-        z-index: 1;
+        z-index: 2;
         color: white;
-        font-size: 1.5rem;
+        font-size: 20px;
         text-align: center;
-        mix-blend-mode: difference;
         line-height: 0;
+        letter-spacing: -1px;
         @media (max-width: 750px) {
-            bottom: 0;
+            bottom: auto;
             right:auto;
             left: 50%;
             transform: translateX(-50%);
