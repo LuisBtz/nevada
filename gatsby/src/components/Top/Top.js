@@ -25,6 +25,7 @@ const ContainerTop = styled.section`
     height: 100vh;
     width: 100%;
     position: relative;
+    scroll-snap-align: start;
     @media (max-width: 750px) {
         height: 70vh;
         overflow: hidden;

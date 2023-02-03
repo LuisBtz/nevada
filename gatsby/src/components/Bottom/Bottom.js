@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Bottom = () => {
 
@@ -34,13 +33,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="01.jpg" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/01.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es una señal.</span></h2>
                         </div>
@@ -48,13 +41,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="02.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/02.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>encuentra claridad.</span></h2>
                         </div>
@@ -62,13 +49,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="03.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/03.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>busca lo esencial.</span></h2>
                         </div>
@@ -76,13 +57,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="04.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/04.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es simple y directo.</span></h2>
                         </div>
@@ -90,13 +65,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="05.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/05.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es colaboración creativa.</span></h2>
                         </div>
@@ -104,42 +73,15 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="06.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                         <img src="/images/06.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>desarrolla soluciones.</span></h2>
                         </div>
                     </Slide>
-                    
-                    {/* <Slide
-                        className='slide'
-                    >
-                        <StaticImage 
-                            src="07.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
-                        <div className="titulo">
-                        <h2>nevada <span>es una señal.</span></h2>
-                        </div>
-                    </Slide> */}
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="08.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/07.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>encuentra claridad.</span></h2>
                         </div>
@@ -147,13 +89,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="09.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/09.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>busca lo esencial.</span></h2>
                         </div>
@@ -161,13 +97,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="10.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/10.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es simple y directo.</span></h2>
                         </div>
@@ -175,13 +105,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="11.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/11.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es colaboración creativa.</span></h2>
                         </div>
@@ -189,13 +113,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="12.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/12.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>desarrolla soluciones.</span></h2>
                         </div>
@@ -203,13 +121,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="13.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/13.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es una señal.</span></h2>
                         </div>
@@ -217,13 +129,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="14.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/14.jpg" alt="Nevada" />
                         <div className="titulo">
                         <h2>nevada <span>encuentra claridad.</span></h2>
                         </div>
@@ -231,13 +137,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="15.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/15.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>busca lo esencial.</span></h2>
                         </div>
@@ -245,13 +145,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="16.jpg" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/16.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>es simple y directo.</span></h2>
                         </div>
@@ -259,13 +153,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="17.jpg" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/17.jpg" alt="Nevada" />
                         <div className="titulo">
                         <h2>nevada <span>es colaboración creativa.</span></h2>
                         </div>
@@ -273,13 +161,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="18.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/18.jpg" alt="Nevada" />
                         <div className="titulo">
                             <h2>nevada <span>desarrolla soluciones.</span></h2>
                         </div>
@@ -287,13 +169,7 @@ const Bottom = () => {
                     <Slide
                         className='slide'
                     >
-                        <StaticImage 
-                            src="19.png" 
-                            alt="Nevada" 
-                            layout="fullWidth"
-                            placeholder="blurred"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <img src="/images/19.jpg" alt="Nevada" />
                         <div className="titulo">
                         <h2>nevada <span>es una señal.</span></h2>
                         </div>
@@ -307,6 +183,7 @@ const ContainerBottom = styled.section`
     height: 100vh;
     position: relative;
     z-index: -1;
+    scroll-snap-align: start;
     .next {
         position: absolute;
         bottom: 95px;
@@ -339,6 +216,10 @@ margin-bottom: -50px;
 const Slide = styled.div`
 position: relative;
 height: 100vh;
+img {
+    height: 100%;
+    object-fit: cover;
+}
 .titulo {
     position: absolute;
     bottom: 100px;

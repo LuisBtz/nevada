@@ -10,7 +10,7 @@ const Header = () => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 200);
         });
-      }, []); 
+      }, [scroll]); 
 
 
     return(
