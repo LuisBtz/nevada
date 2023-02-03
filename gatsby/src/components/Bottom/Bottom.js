@@ -205,7 +205,7 @@ const ContainerBottom = styled.section`
             right:auto;
             left: 50%;
             transform: translateX(-50%);
-            top: 50px;
+            top: 80px;
             line-height: normal;
         }
     }
