@@ -156,6 +156,9 @@ position: relative;
     @media (max-width: 990px) {
         width: 150px;
     }
+    @media (max-width: 550px) {
+        width: 120px;
+    }
     
   }
 `

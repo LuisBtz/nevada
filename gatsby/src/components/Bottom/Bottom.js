@@ -159,22 +159,34 @@ const ContainerBottom = styled.section`
     }
     .text {
         position: absolute;
-        bottom: 68px;
+        bottom: 62px;
         left: 175px;
         color: white;
         z-index: 1;
         @media (max-width: 990px) {
             left: 140px;
-            bottom: 66px;
+            bottom: 64px;
         }
+        @media (max-width: 550px) {
+            left: 110px;
+        }
+        @media (max-width: 400px) {
+                bottom: 66px;
+            }
         span {
             font-size: 47px;
-            line-height: 0;
             font-family: var(--light);
             letter-spacing: -1px;
             @media (max-width: 990px) {
                 font-size: 37px;
             }
+            @media (max-width: 550px) {
+                font-size: 28px;
+            }
+            @media (max-width: 400px) {
+                font-size: 6vw;
+            }
+
         }
     }
     .next {
