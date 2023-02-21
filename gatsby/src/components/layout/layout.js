@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { Normalizer } from "../styles/Normalizer"
 import { Typography } from "../styles/Typography"
 import Header from "./header"
@@ -6,15 +6,16 @@ import Header from "./header"
 
 
 
-function Layout({ children, dark }) {
+function Layout({ children, scroll  }) {
+
 
 
   return (
     <>
       <Normalizer />
       <Typography />
-      <Header dark={dark} />
-      <main>{children}</main>
+      <Header scroll={scroll} />
+      <main >{children}</main>
     </>
   )
 }

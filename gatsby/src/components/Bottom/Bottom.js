@@ -150,7 +150,7 @@ const ContainerBottom = styled.section`
     overflow-y: hidden;
     .overlay {
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.35);
+        background: linear-gradient(rgba(255, 255, 255,.2 ), rgba(0,0,0,1));
         top: 0;
         left: 0;
         bottom: 0;

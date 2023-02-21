@@ -13,7 +13,7 @@ const Top = () => {
                 canvasWidth='100vw'
                 hideGrid={true}
                 lazyRadius= {5}
-                brushRadius= {60}
+                brushRadius= {40}
                 brushColor="#FF1C00"
                 catenaryColor="rgba(0,0,0,0)"
             />
@@ -22,14 +22,7 @@ const Top = () => {
 }
 
 const ContainerTop = styled.section`
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    scroll-snap-align: start;
-    @media (max-width: 750px) {
-        height: 70vh;
-        overflow: hidden;
-    }
+   
     div {
         background-color: transparent !important;
     }
