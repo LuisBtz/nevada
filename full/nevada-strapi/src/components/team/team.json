@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_team_teams",
+  "info": {
+    "displayName": "Team",
+    "icon": "walk"
+  },
+  "options": {},
+  "attributes": {
+    "MemberPhoto": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "MemberName": {
+      "type": "string"
+    },
+    "MemberPosition": {
+      "type": "string"
+    }
+  }
+}

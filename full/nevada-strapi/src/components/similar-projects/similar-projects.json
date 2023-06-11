@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_similar_projects_similar_projects",
+  "info": {
+    "displayName": "SimilarProjects",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    }
+  }
+}

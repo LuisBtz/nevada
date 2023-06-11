@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_services_services_lists",
+  "info": {
+    "displayName": "ServicesList",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "Service": {
+      "type": "string"
+    }
+  }
+}

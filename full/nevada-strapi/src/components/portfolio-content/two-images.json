@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_portfolio_content_two_images",
+  "info": {
+    "displayName": "Two Images",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "Image1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Image2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

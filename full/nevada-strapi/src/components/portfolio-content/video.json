@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_portfolio_content_videos",
+  "info": {
+    "displayName": "Video",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "VimeoID": {
+      "type": "string"
+    }
+  }
+}

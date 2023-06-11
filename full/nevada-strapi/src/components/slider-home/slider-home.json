@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_slider_home_slider_homes",
+  "info": {
+    "displayName": "SliderHome",
+    "icon": "landscape",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "SlideImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "SlideText": {
+      "type": "string"
+    }
+  }
+}
