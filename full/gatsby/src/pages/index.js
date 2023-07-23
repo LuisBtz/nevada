@@ -4,6 +4,9 @@ import { Seo } from '../components/layout/seo';
 import Video from "../components/home/Video";
 import { graphql } from "gatsby";
 import Portfolio from "../components/home/Portfolio";
+import Servicios from "../components/home/Servicios";
+import SliderComponent from "../components/home/SliderComponent";
+import Contacto from "../components/home/Contacto";
 
 export const data = graphql`
   query {
@@ -15,8 +18,55 @@ export const data = graphql`
       portfolioTexto {
         esText
       }
+      serviciosTitle {
+        esString
+      }
+      serviciosText1 {
+        esText
+      }
+      serviciosText2 {
+        esText
+      }
+      serviciosList {
+        _key
+        esString
+      }
+      oficinasTitulo {
+        esString
+      }
+      oficinasTexto {
+        esString
+      }
+      oficinasSlider {
+        _key
+        textoAlternativo {
+          esString
+        }
+        asset {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            outputPixelDensities: 1.5
+            placeholder: DOMINANT_COLOR
+          )
+        }
+        
+      }
+      
+      contactoTitulo {
+        esString
+      }
+      contactoTexto {
+        esString
+      }
     }
-    allSanityPostPage {
+
+    sanitySettingsPage {
+      mail
+      linkMapa
+    }
+
+
+    allSanityPostPage(limit: 11) {
       edges {
         node {
           title
@@ -27,6 +77,9 @@ export const data = graphql`
             esText
           }
           thumbnail {
+            textoAlternativo {
+              esString
+            }
             asset {
               gatsbyImageData(
                 layout: FULL_WIDTH
@@ -34,6 +87,30 @@ export const data = graphql`
                 placeholder: DOMINANT_COLOR
               )
             }
+          }
+        }
+      }
+    }
+    allSanityCategoria {
+      edges {
+        node {
+          _id
+          title
+          slug {
+            current
+          }
+          
+          
+        }
+      }
+    }
+    allSanityIndustria {
+      edges {
+        node {
+          _id
+          title
+          slug {
+            current
           }
         }
       }
@@ -51,7 +128,10 @@ const IndexPage = ({data}) => {
   return (
     <Layout indexTrue={indexTrue} >
         <Video data={data} />
-        <Portfolio data={data.sanityHomePage} posts={data.allSanityPostPage}/>
+        <Portfolio data={data.sanityHomePage} posts={data}/>
+        <Servicios data={data.sanityHomePage} />
+        <SliderComponent data={data} />
+        <Contacto data={data} />
     </Layout>
   )
 }

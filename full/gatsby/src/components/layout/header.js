@@ -181,7 +181,10 @@ const HeaderContainer = styled.div`
 .mov {
   display: none;
   padding: 20px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 6;
   .ham.click {
     .line {

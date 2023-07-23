@@ -9,6 +9,9 @@ export default defineType({
                 name: 'textoAlternativo',
                 type: 'stringType',
                 title: 'Texto Alternativo',
+                validation: Rule => [
+                    Rule.required().error('Texto alternativo en imágenes requerido'),
+                  ]
             },
         ]
 })
