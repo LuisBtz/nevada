@@ -61,7 +61,7 @@ const SliderComponent = ({data}) => {
                             <div className="info">
                                 <p className="sliderCount">{n(activeSlideIndex + 1)} de {n(data.sanityHomePage.oficinasSlider.length)}</p>
                                 <p className="tecto">{bgGetDataImageAlt}</p>
-                                <a href={data.sanitySettingsPage.linkMapa} >Ubícanos<span><img src="/arrow.svg" alt='flecha a nuestra dirección' /></span></a>
+                                <a target="_blank" rel="noreferrer" href={data.sanitySettingsPage.linkMapa} >Ubícanos<span><img src="/arrow.svg" alt='flecha a nuestra dirección' /></span></a>
                             </div>
                         </Slide>
                     );

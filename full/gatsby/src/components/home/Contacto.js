@@ -18,6 +18,10 @@ const ContactoContainer = styled.section`
     border: solid 1px white;
     border-radius: 50%;
     padding: 50px 100px;
+    @media (max-width: 680px) {
+            padding: 40px 10px;
+            width: 95%;
+        }
     h3 {
         font-size: 0.875rem;
     }
@@ -25,6 +29,9 @@ const ContactoContainer = styled.section`
         font-size: 2.4vw;
         margin-bottom: 50px;
         margin-top: 50px;
+        @media (max-width: 680px) {
+            font-size: 1rem;
+        }
     }
     a {
         font-size: 1.25rem;
