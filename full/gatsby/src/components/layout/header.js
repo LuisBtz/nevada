@@ -74,7 +74,7 @@ const Header = ({indexTrue}) => {
       console.log(indexTrue)
     return(
         <HeaderContainer>
-          <div className={navOpen ? " intro hide" : " intro"}>
+          <div style={indexTrue === true ? {display: 'block'} : {display: 'none'} } className={navOpen ? " intro hide" : " intro"}>
             <img className="logo" src="/logo.svg" alt="Nevada Logo" />
           </div>
           <div className="mov">

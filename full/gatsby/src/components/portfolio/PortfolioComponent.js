@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Portfolio = ({data}) => {
+const PortfolioComponent = ({data}) => {
 
 
 
@@ -15,9 +15,9 @@ const Portfolio = ({data}) => {
     return(
         <PortfolioContainer>
             <div className='top'>
-                <h2>{data.sanityHomePage.portafolioTitulo.esString}</h2>
+                <h2>{data.sanityPortfolioPage.title}</h2>
                 <div className='de'>
-                    <p>{data.sanityHomePage.portfolioTexto.esText}</p>
+                    <p>{data.sanityPortfolioPage.textoPortfolio.esString}</p>
                     <Link to='/portfolio'>Nuestro portafolio</Link>
                 </div>
             </div>
@@ -30,29 +30,29 @@ const Portfolio = ({data}) => {
                     <button
                         onMouseEnter={() => setIsHovered(!isHovered)}
                     >Por Categoría</button>
-                    <ul  className={isHovered ? 'listaCategoria' : 'listaCategoria active'}
+                    <button  className={isHovered ? 'listaCategoria' : 'listaCategoria active'}
                         onMouseLeave={() => setIsHovered(!isHovered)}
                     >
                         {data.allSanityCategoria.edges.map(({node}) => {
                             return(
-                                <li key={node._id}><Link to={`/categoria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></li>
+                                <div key={node._id}><Link to={`/categoria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
                             )
                         })}
-                    </ul>
+                    </button>
                 </div>
                 <div className='industria'>
                     <button
                         onMouseEnter={() => setIsHoveredInd(!isHoveredInd)}
                     >Por Industría</button>
-                    <ul  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
+                    <button  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
                         onMouseLeave={() => setIsHoveredInd(!isHoveredInd)}
                     >
                         {data.allSanityIndustria.edges.map(({node}) => {
                             return(
-                                <li key={node._id}><Link to={`/industria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></li>
+                                <div key={node._id}><Link to={`/industria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
                             )
                         })}
-                    </ul>
+                    </button>
                 </div>
             </div>
             <div className='posts'>
@@ -89,13 +89,15 @@ const Portfolio = ({data}) => {
 const PortfolioContainer = styled.section`
     padding: 100px 50px;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 40px auto;
     @media (max-width: 680px) {
         padding: 50px 20px;
     }
     .top {
         display: flex;
         width: 100%;
+        border-top: solid 1px white;
+        padding-top: 50px;
         @media (max-width: 680px) {
             flex-direction: column;
             margin-bottom: 100px;
@@ -160,7 +162,7 @@ const PortfolioContainer = styled.section`
                 color: black;
                 padding: 5px;
                 display: none;
-                li {
+                div {
                     padding: 5px;
                     border-bottom: solid 1px black;
                     display: block;
@@ -172,7 +174,7 @@ const PortfolioContainer = styled.section`
                 font-size: 0.875rem;
                 color: rgba(255, 255, 255, 0.7);
                 &:hover {
-                    color: rgba(255, 255, 255, 1);
+                    color: rgba(0, 0, 0, 1);
                 }
             }
         }
@@ -188,8 +190,6 @@ const PortfolioContainer = styled.section`
     }
     .posts {
         margin-top: 50px;
-        padding-bottom: 100px;
-        border-bottom: solid 1px white;
         .articulos {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -312,4 +312,4 @@ const PortfolioContainer = styled.section`
     }
 `
 
-export default Portfolio
+export default PortfolioComponent

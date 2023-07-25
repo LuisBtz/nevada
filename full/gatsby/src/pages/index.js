@@ -128,7 +128,7 @@ const IndexPage = ({data}) => {
   return (
     <Layout indexTrue={indexTrue} >
         <Video data={data} />
-        <Portfolio data={data.sanityHomePage} posts={data}/>
+        <Portfolio data={data} />
         <Servicios data={data.sanityHomePage} />
         <SliderComponent data={data} />
         <Contacto data={data} />
