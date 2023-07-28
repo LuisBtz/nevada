@@ -18,5 +18,10 @@ export default {
             title: 'Texto 2 Portafolio',
             type: 'stringType'
         },
+        {
+            name: 'imagenFinal',
+            title: 'Imagen Final',
+            type: 'imageType'
+        },
     ]
 }

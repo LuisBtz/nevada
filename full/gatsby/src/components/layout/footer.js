@@ -125,6 +125,9 @@ const FooterContainer = styled.footer`
     background-color: var(--red);
     color: var(--black);
     padding: 50px 50px 0px;
+    @media (max-width: 875px) {
+        padding: 50px 20px;
+    }
     p {
         font-family: var(--light);
     }

@@ -1,15 +1,59 @@
 import React from "react";
 import Layout from '../components/layout/layout'
 import { Seo } from '../components/layout/seo';
+import { graphql } from 'gatsby'
+import Formulario from "../components/contact/Formulario";
 
 
-const ContactPage = () => {
+export const data = graphql`
+  query {
+    sanityContactPage {
+      textoPortfolio {
+        esString
+      }
+      texto2Portfolio {
+        esString
+      }
+      imagenFinal {
+        textoAlternativo {
+          esString
+        }
+        asset {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            outputPixelDensities: 1.5
+            placeholder: DOMINANT_COLOR
+          )
+        }
+      }
+    }
+    sanitySettingsPage {
+      mail
+      direccion
+      tel
+      redesSociales {
+        _key
+        redSocial
+        socialLink
+      }
+    }
+
+
+
+  }
+`;
+
+
+
+
+
+const ContactPage = ({data}) => {
 
   const index = false;
 
   return (
     <Layout idex={index}>
-        <h2>INDEX</h2>
+        <Formulario data={data} />
     </Layout>
   )
 
