@@ -87,9 +87,9 @@ const PortfolioComponent = ({data}) => {
 }
 
 const PortfolioContainer = styled.section`
-    padding: 100px 50px;
+    padding: 140px 50px 0px;
     max-width: 1400px;
-    margin: 40px auto;
+    margin: 0 auto;
     @media (max-width: 680px) {
         padding: 50px 20px;
     }

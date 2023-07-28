@@ -15,12 +15,12 @@ const Video = ({data}) => {
 }
 
 const VideoContainer = styled.section`
+    padding-top: 300px;
 .video {
     position: relative;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    margin-top: 300px;
     @media (max-width: 680px) {
         margin-top: 0;
     }
