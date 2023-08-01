@@ -84,7 +84,7 @@ export default {
                 },
                 {
                     title: 'Vimeo ID',
-                    type: 'stringType'
+                    type: 'stringType',
                 }
             ]
         }

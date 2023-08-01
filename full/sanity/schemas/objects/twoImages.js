@@ -15,5 +15,11 @@ export default defineType({
                 type: 'imageType',
                 title: 'Imagen2',
             },
-        ]
+        ],
+        preview: {
+            select: {
+              title: 'imagen1.textoAlternativo.esString',
+              media: 'imagen1'
+            },
+          },
 })

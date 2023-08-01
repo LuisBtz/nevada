@@ -13,5 +13,10 @@ export default {
             title: 'Texto Portafolio',
             type: 'stringType'
         },
+        {
+            name: 'textoOtrosProyectos',
+            title: 'Texto en -seeción otros proyectos- dentro de cada proyecto',
+            type: 'stringType'
+        },
     ]
 }

@@ -13,5 +13,6 @@ export default defineType({
                     Rule.required().error('Texto alternativo en imágenes requerido'),
                   ]
             },
-        ]
+        ],
+        
 })
