@@ -25,6 +25,7 @@ const SliderComponent = ({data}) => {
         swipeToSlide: true,
         touchMove: true,
         speed: 0,
+        arrows: false,
         beforeChange: function (currentSlide, nextSlide) {
             console.log('before change', currentSlide, nextSlide);
             setActiveSlideIndex(nextSlide);
