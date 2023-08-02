@@ -176,6 +176,9 @@ const HeaderContainer = styled.div`
     position: absolute;
     bottom: 0;
     padding: 50px;
+    @media (max-width: 680px) {
+      bottom: 80px;
+    }
   }
 }
 .mov {
