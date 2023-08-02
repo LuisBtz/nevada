@@ -17,6 +17,7 @@ import contactPage from './singleton/contactPage'
 import postPage from './portfolio/postPage'
 import categoria from './portfolio/categoria'
 import industria from './portfolio/industria'
+import contRel from './portfolio/contRel'
 
 export const schemaTypes = [
 
@@ -40,5 +41,6 @@ export const schemaTypes = [
     
     postPage,
     categoria,
-    industria
+    industria,
+    contRel
 ]

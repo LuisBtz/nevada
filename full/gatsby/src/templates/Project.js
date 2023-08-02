@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import styled from "styled-components";
 import BlockContent from '@sanity/block-content-to-react';
 import ModuleComp from "../components/modulesPortfolio/ModulesComp";
+import RelatedContent from "../components/portfolio/RelatedContent";
 
 
 export const query = graphql`
@@ -22,6 +23,7 @@ export const query = graphql`
         shortDescription {
             esText
         }
+
         _rawTextoEs
         modulos {
             ... on SanityImageType {
@@ -58,7 +60,46 @@ export const query = graphql`
                         )
                     }
                 }
+                imagen2 {
+                    textoAlternativo {
+                        esString
+                    }
+                    asset {
+                        gatsbyImageData(
+                            layout: FULL_WIDTH
+                            outputPixelDensities: 1.5
+                            placeholder: DOMINANT_COLOR
+                        )
+                    }
+                }
             }
+        }
+        contenidoRelacionado {
+            _id
+            title
+            shortDescription {
+                esText
+            }
+            slug {
+                current
+            }
+            thumbnail {
+                textoAlternativo {
+                esString
+                }
+                asset {
+                gatsbyImageData(
+                    layout: FULL_WIDTH
+                    outputPixelDensities: 1.5
+                    placeholder: DOMINANT_COLOR
+                )
+                }
+            }
+            }
+    }
+    portfolio: sanityPortfolioPage {
+        textoOtrosProyectos {
+            esString
         }
     }
   }
@@ -68,9 +109,10 @@ export const query = graphql`
 
 
 // markup
-export default function SinglePortfolioPage({ data: { project } }) {
+export default function SinglePortfolioPage({ data: { project, portfolio } }) {
 
     const [show, setShow] = useState(true);
+
 
 
   return (
@@ -127,6 +169,7 @@ export default function SinglePortfolioPage({ data: { project } }) {
                 </div>
             </div>
             <ModuleComp modulos={project.modulos} />
+            <RelatedContent contRel={project.contenidoRelacionado} portfolio={portfolio} />
         </ProjectContainer>
     </Layout>
   );

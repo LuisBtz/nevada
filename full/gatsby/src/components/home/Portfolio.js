@@ -43,7 +43,7 @@ const Portfolio = ({data}) => {
                 <div className='industria'>
                     <button
                         onMouseEnter={() => setIsHoveredInd(!isHoveredInd)}
-                    >Por Industría</button>
+                    >Por Industria</button>
                     <ul  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
                         onMouseLeave={() => setIsHoveredInd(!isHoveredInd)}
                     >
@@ -203,7 +203,7 @@ const PortfolioContainer = styled.section`
                     grid-row: auto !important;
                     display: block !important;
                     .image {
-                        height: 30vw !important;
+                        height: 200px !important;
                     }
                     .info {
                         height: auto !important;
@@ -223,14 +223,14 @@ const PortfolioContainer = styled.section`
                 &:nth-child(11n - 10) {
                     grid-column: 1 / 5;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 9) {
                     grid-column: 1 / 5;
                     grid-row: 2/3;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 8) {
@@ -250,35 +250,35 @@ const PortfolioContainer = styled.section`
                     grid-column: 9 / 13;
                     grid-row: 1/2;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 6) {
                     grid-column: 9 / 13;
                     grid-row: 2/3;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 5) {
                     grid-column: 1 / 5;
                     grid-row: 3/4;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 4) {
                     grid-column: 5 / 9;
                     grid-row: 3/4;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 3) {
                     grid-column: 9 / 13;
                     grid-row: 3/4;
                     .image {
-                        height: 20vw;
+                        height: 250px;
                     }
                 }
                 &:nth-child(11n - 2) {

@@ -1,90 +1,94 @@
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Layout from '../components/layout/layout'
+import { Seo } from '../components/layout/seo';
 
-const PortfolioComponent = ({data}) => {
 
-
+export default function SingleCategoriaPage({data: { categoria, portfolio, portfolioPage, categorias, industrias } }) {
 
     const [isHovered, setIsHovered] = useState(true);
     const [isHoveredInd, setIsHoveredInd] = useState(true);
 
 
-
-    return(
-        <PortfolioContainer>
-            <div className='top'>
-                <h2>{data.sanityPortfolioPage.title}</h2>
-                <div className='de'>
-                    <p>{data.sanityPortfolioPage.textoPortfolio.esString}</p>
-                    <Link to='/portfolio'>Nuestro portafolio</Link>
+    
+    return (
+        <Layout>
+            <PortfolioContainer>
+                <div className='top'>
+                    <h2>{categoria.title}</h2>
+                    <div className='de'>
+                        <p>{portfolioPage.textoPortfolio.esString}</p>
+                        <Link to='/portfolio'>Nuestro portafolio</Link>
+                    </div>
                 </div>
-            </div>
-            <div className='filter'>
-                <div className='todo'>
-                    <div className='dot'></div>
-                    <h4><Link to='/portfolio'>Todo</Link></h4>
+                <div className='filter'>
+                    <div className='todo'>
+                        <div className='dot'></div>
+                        <h4><Link to='/portfolio'>Todo</Link></h4>
+                    </div>
+                    <div className='categoria' >
+                        <button
+                            onMouseEnter={() => setIsHovered(!isHovered)}
+                        >Por Categoría</button>
+                        <button  className={isHovered ? 'listaCategoria' : 'listaCategoria active'}
+                            onMouseLeave={() => setIsHovered(!isHovered)}
+                        >
+                            {categorias.edges.map(({node}) => {
+                                return(
+                                    <div key={node._id}><Link to={`/categoria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
+                                )
+                            })}
+                        </button>
+                    </div>
+                    <div className='industria'>
+                        <button
+                            onMouseEnter={() => setIsHoveredInd(!isHoveredInd)}
+                        >Por Industria</button>
+                        <button  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
+                            onMouseLeave={() => setIsHoveredInd(!isHoveredInd)}
+                        >
+                            {industrias.edges.map(({node}) => {
+                                return(
+                                    <div key={node._id}><Link to={`/industria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
+                                )
+                            })}
+                        </button>
+                    </div>
                 </div>
-                <div className='categoria' >
-                    <button
-                        onMouseEnter={() => setIsHovered(!isHovered)}
-                    >Por Categoría</button>
-                    <button  className={isHovered ? 'listaCategoria' : 'listaCategoria active'}
-                        onMouseLeave={() => setIsHovered(!isHovered)}
-                    >
-                        {data.allSanityCategoria.edges.map(({node}) => {
+                <div className='posts'>
+                    <div className='nav'></div>
+                    <div className='articulos'>
+                        {portfolio.edges.map(({node}) => {
+                                const bgGetDataImage = getImage(node.thumbnail.asset)
+                                const bgGetDataImageAlt = node.thumbnail.textoAlternativo.esString
+                            
                             return(
-                                <div key={node._id}><Link to={`/categoria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
+                                <article>
+                                    <div className='image'>
+                                        <Link to={`/portfolio/${node.slug && node.slug.current}`}>
+                                            <GatsbyImage
+                                                style={{ height: "100%", width: "100%" }}
+                                                image={bgGetDataImage}
+                                                alt={bgGetDataImageAlt}
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div className='info'>
+                                        <h3>{node.title && node.title}</h3>
+                                        <p>{node.shortDescription && node.shortDescription.esText}</p>
+                                    </div>
+                                </article>
                             )
                         })}
-                    </button>
+                    </div>
                 </div>
-                <div className='industria'>
-                    <button
-                        onMouseEnter={() => setIsHoveredInd(!isHoveredInd)}
-                    >Por Industria</button>
-                    <button  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
-                        onMouseLeave={() => setIsHoveredInd(!isHoveredInd)}
-                    >
-                        {data.allSanityIndustria.edges.map(({node}) => {
-                            return(
-                                <div key={node._id}><Link to={`/industria/${node.slug && node.slug.current}`}>{node.title && node.title}</Link></div>
-                            )
-                        })}
-                    </button>
-                </div>
-            </div>
-            <div className='posts'>
-                <div className='nav'></div>
-                <div className='articulos'>
-                    {data.allSanityPostPage.edges.map(({node}) => {
-                            const bgGetDataImage = getImage(node.thumbnail.asset)
-                            const bgGetDataImageAlt = node.thumbnail.textoAlternativo.esString
-                        
-                        return(
-                            <article>
-                                <div className='image'>
-                                    <Link to={`/portfolio/${node.slug && node.slug.current}`}>
-                                        <GatsbyImage
-                                            style={{ height: "100%", width: "100%" }}
-                                            image={bgGetDataImage}
-                                            alt={bgGetDataImageAlt}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className='info'>
-                                    <h3>{node.title && node.title}</h3>
-                                    <p>{node.shortDescription && node.shortDescription.esText}</p>
-                                </div>
-                            </article>
-                        )
-                    })}
-                </div>
-            </div>
-        </PortfolioContainer>
+            </PortfolioContainer>
+        </Layout>
     )
 }
+
 
 const PortfolioContainer = styled.section`
     padding: 140px 50px 0px;
@@ -313,4 +317,73 @@ const PortfolioContainer = styled.section`
     }
 `
 
-export default PortfolioComponent
+
+
+
+export const query = graphql`
+    query($slug: String!){
+        categoria: sanityCategoria(slug: { current: {eq: $slug} }){
+            title
+        }
+        portfolioPage: sanityPortfolioPage {
+            textoPortfolio {
+                esString
+            }
+        }
+        portfolio: allSanityPostPage(filter: {categorias: {elemMatch: {slug: {current: {eq: $slug} }}}}) {
+            edges {
+                node {
+                    title
+                    slug {
+                        current
+                    }
+                    shortDescription {
+                        esText
+                    }
+                    thumbnail {
+                        textoAlternativo {
+                            esString
+                        }
+                        asset {
+                            gatsbyImageData(
+                                layout: FULL_WIDTH
+                                outputPixelDensities: 1.5
+                                placeholder: DOMINANT_COLOR
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        categorias: allSanityCategoria {
+            edges {
+                node {
+                    _id
+                    title
+                    slug {
+                        current
+                    }
+                    
+                    
+                }
+            }
+        }
+        industrias: allSanityIndustria {
+            edges {
+                node {
+                    _id
+                    title
+                    slug {
+                        current
+                    }
+                }
+            }
+        }
+    }
+`
+
+export const Head = () => (
+    <Seo title='Nevada Projects' description='Full website soon' image='/screenshot.png' />
+    )
+  

@@ -87,7 +87,19 @@ export default {
                     type: 'stringType',
                 }
             ]
-        }
+        },
+        {
+            name: 'contenidoRelacionado',
+            title: 'Contenido Relacionado',
+            type: 'array',
+            of: [
+                {
+                    name: 'contRel',
+                    title: 'Contenido Relacionado',
+                    type: 'contRel',
+                }
+            ]
+          },
     ],
     preview: {
         select: {

@@ -16,6 +16,9 @@ const Video = ({data}) => {
 
 const VideoContainer = styled.section`
     padding-top: 300px;
+    @media (max-width: 680px) {
+        padding-top: 80px;
+    }
 .video {
     position: relative;
     overflow: hidden;

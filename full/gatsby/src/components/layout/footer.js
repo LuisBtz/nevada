@@ -62,60 +62,63 @@ const bgGetDataImageAlt = data.sanitySettingsPage.nevadaLogo && data.sanitySetti
 
     return(
         <FooterContainer>
-            <Link to='/' className="logo">
-                <div className="image">
-                    <GatsbyImage
-                        style={{ height: "100%", width: "100%" }}
-                        image={bgGetDataImage}
-                        alt={bgGetDataImageAlt}
-                    />
-                </div>
-            </Link>
-            <div className="top">
-                    
-                <div className="column1">
-                    <p>{data.sanitySettingsPage.descripcion && data.sanitySettingsPage.descripcion.esText}</p>
-                </div>
-                <div className="column2">
-                    <ul>
-                        <li><h4>Nevada</h4></li>
-                        <li>
-                            <Link to='/about'>Nosotros</Link>
-                        </li>
-                        <li>
-                            <Link to='/portfolio'>Portafolio</Link>
-                        </li>
-                        <li>
-                            <Link to='/contact'>Contacto</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className="column3">
-                    <h4>Contáctanos</h4>
-                    <a target="_blank" rel="noreferrer" href={data.sanitySettingsPage.linkMapa && data.sanitySettingsPage.linkMapa}>{data.sanitySettingsPage.direccion && data.sanitySettingsPage.direccion}</a>
-                    <p>{data.sanitySettingsPage.tel && data.sanitySettingsPage.tel}</p>
-                    <a href={`mailto:${data.sanitySettingsPage.mail}`}>{data.sanitySettingsPage.mail}</a>
-                </div>
-                <div className="column4">
-                    <ul>
-                        <li><h4>Síguenos</h4></li>
-                        {data.sanitySettingsPage.redesSociales.map(({ redSocial, socialLink, _key }) => {
-                            return (
-                                <li><a href={socialLink && socialLink}>{redSocial && redSocial}</a></li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-            <div className="bot">
-                <p>{data.sanitySettingsPage.copyRight && data.sanitySettingsPage.copyRight.esString}</p>
-                <div className="images">
-                    <div className="area"></div>
-                    <div className="img">
-                        <img src={data.sanitySettingsPage.sticker1 && data.sanitySettingsPage.sticker1.asset.url} alt={data.sanitySettingsPage.sticker1.textoAlternativo.esString} />
-                        <img src={data.sanitySettingsPage.sticker2 && data.sanitySettingsPage.sticker2.asset.url} alt={data.sanitySettingsPage.sticker2.textoAlternativo.esString} />
+            <div className="contenedor">
+                <Link to='/' className="logo">
+                    <div className="image">
+                        <GatsbyImage
+                            style={{ height: "100%", width: "100%" }}
+                            image={bgGetDataImage}
+                            alt={bgGetDataImageAlt}
+                        />
+                    </div>
+                </Link>
+                <div className="top">
+                        
+                    <div className="column1">
+                        <p>{data.sanitySettingsPage.descripcion && data.sanitySettingsPage.descripcion.esText}</p>
+                    </div>
+                    <div className="column2">
+                        <ul>
+                            <li><h4>Nevada</h4></li>
+                            <li>
+                                <Link to='/about'>Nosotros</Link>
+                            </li>
+                            <li>
+                                <Link to='/portfolio'>Portafolio</Link>
+                            </li>
+                            <li>
+                                <Link to='/contact'>Contacto</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="column3">
+                        <h4>Contáctanos</h4>
+                        <a target="_blank" rel="noreferrer" href={data.sanitySettingsPage.linkMapa && data.sanitySettingsPage.linkMapa}>{data.sanitySettingsPage.direccion && data.sanitySettingsPage.direccion}</a>
+                        <p>{data.sanitySettingsPage.tel && data.sanitySettingsPage.tel}</p>
+                        <a href={`mailto:${data.sanitySettingsPage.mail}`}>{data.sanitySettingsPage.mail}</a>
+                    </div>
+                    <div className="column4">
+                        <ul>
+                            <li><h4>Síguenos</h4></li>
+                            {data.sanitySettingsPage.redesSociales.map(({ redSocial, socialLink, _key }) => {
+                                return (
+                                    <li><a href={socialLink && socialLink}>{redSocial && redSocial}</a></li>
+                                )
+                            })}
+                        </ul>
                     </div>
                 </div>
+                <div className="bot">
+                    <p>{data.sanitySettingsPage.copyRight && data.sanitySettingsPage.copyRight.esString}</p>
+                    <div className="images">
+                        <div className="area"></div>
+                        <div className="img">
+                            <img src={data.sanitySettingsPage.sticker1 && data.sanitySettingsPage.sticker1.asset.url} alt={data.sanitySettingsPage.sticker1.textoAlternativo.esString} />
+                            <img src={data.sanitySettingsPage.sticker2 && data.sanitySettingsPage.sticker2.asset.url} alt={data.sanitySettingsPage.sticker2.textoAlternativo.esString} />
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </FooterContainer>
     )
@@ -124,9 +127,14 @@ const bgGetDataImageAlt = data.sanitySettingsPage.nevadaLogo && data.sanitySetti
 const FooterContainer = styled.footer`
     background-color: var(--red);
     color: var(--black);
-    padding: 50px 50px 0px;
-    @media (max-width: 875px) {
-        padding: 50px 20px;
+    
+    .contenedor {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 50px 50px 0px;
+        @media (max-width: 875px) {
+            padding: 50px 20px;
+        }
     }
     p {
         font-family: var(--light);

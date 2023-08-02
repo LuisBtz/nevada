@@ -183,9 +183,11 @@ const HeaderContainer = styled.div`
   padding: 20px;
   position: fixed;
   width: 100%;
+  height: 80px;
   top: 0;
   left: 0;
   z-index: 6;
+  /* background-color: var(--black); */
   .ham.click {
     .line {
       position: absolute;
@@ -270,6 +272,9 @@ nav {
   .top {
     display: flex;
     justify-content: space-between;
+    padding: 0 50px 0px;
+    max-width: 1400px;
+    margin: 0 auto;
     h2 {
       font-size: 0.875rem;
     }
@@ -337,7 +342,9 @@ nav {
     }
   }
   .bottom {
-    margin-top: 150px;
+    padding: 0 50px 0px;
+    max-width: 1400px;
+    margin: 150px auto 0;
     @media (max-width: 680px) {
       text-align: center;
       span {
