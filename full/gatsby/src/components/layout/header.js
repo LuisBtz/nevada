@@ -75,10 +75,14 @@ const Header = ({indexTrue}) => {
     return(
         <HeaderContainer>
           <div style={indexTrue === true ? {display: 'block'} : {display: 'none'} } className={navOpen ? " intro hide" : " intro"}>
-            <img className="logo" src="/logo.svg" alt="Nevada Logo" />
+            <Link  to='/'>
+              <img className="logo" src="/logo.svg" alt="Nevada Logo" />
+            </Link>
           </div>
           <div className="mov">
-            <img className="logo" src="/logo.svg" alt="Nevada Logo" />
+            <Link  to='/'>
+              <img className="logo" src="/logo.svg" alt="Nevada Logo" />
+            </Link>
             <button className={ showMenuMov ? 'ham click' : 'ham'} onClick={() => setShowMenuMov(!showMenuMov)}>
               <div className="line"></div>
               <div className="line"></div>
@@ -190,7 +194,7 @@ const HeaderContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 6;
-  /* background-color: var(--black); */
+  background-color: var(--red);
   .ham.click {
     .line {
       position: absolute;
@@ -275,7 +279,6 @@ nav {
   .top {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px 0px;
     max-width: 1400px;
     margin: 0 auto;
     h2 {
@@ -345,7 +348,6 @@ nav {
     }
   }
   .bottom {
-    padding: 0 50px 0px;
     max-width: 1400px;
     margin: 150px auto 0;
     @media (max-width: 680px) {
