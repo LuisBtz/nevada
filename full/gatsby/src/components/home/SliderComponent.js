@@ -78,6 +78,12 @@ const Slide = styled.div`
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+        @media (max-width: 680px) {
+            flex-direction: column;
+            p {
+                padding-bottom: 5px;
+            }
+        }
         a {
             display: flex;
             align-items: center;
@@ -94,6 +100,9 @@ const SliderContainer = styled.section`
     padding: 0 50px 50px;
     max-width: 1400px;
     margin: 0 auto;
+    @media (max-width: 680px) {
+        padding: 0 20px;
+    }
     .slider {
         border-top: solid 1px white;
         .top {

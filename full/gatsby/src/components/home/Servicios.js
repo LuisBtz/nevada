@@ -42,13 +42,15 @@ const Servicios = ({data}) => {
 const MarqueeSection = styled.section`
     background-color: var(--black);
     position: relative;
-    margin-bottom: 100px;
-    margin-top: 20px;
+    width: 100vw;
+    height: 130px;
+    overflow: hidden;
     .marquee__content {
         display: block;
         width: 5000px;
         position: absolute;
-        animation: 25s linear 0s infinite normal none running marquee-x;
+        top: 30px;
+        animation: marquee-x 25s linear 0s infinite normal none running ;
         .marquee__content--item {
             display: inline;
             padding: 10px;
