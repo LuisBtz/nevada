@@ -168,6 +168,9 @@ const PortfolioContainer = styled.section`
                     border-bottom: solid 1px rgba(0, 0, 0, 0.2);
                     display: block;
                     width: 200px;
+                    &:last-child {
+                        border-bottom: none !important;
+                    }
                     &:hover {
                         border-bottom: solid 1px rgba(0, 0, 0, 1);
                     }
