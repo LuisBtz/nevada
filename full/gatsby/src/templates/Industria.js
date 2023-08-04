@@ -8,8 +8,8 @@ import { Seo } from '../components/layout/seo';
 
 export default function SingleIndustriaPage({data: { industria, portfolio, portfolioPage, categorias, industrias } }) {
 
-    const [isHovered, setIsHovered] = useState(true);
-    const [isHoveredInd, setIsHoveredInd] = useState(true);
+    const [isHovered, setIsHovered] = useState(false);
+    const [isHoveredInd, setIsHoveredInd] = useState(false);
 
 
     
@@ -30,10 +30,9 @@ export default function SingleIndustriaPage({data: { industria, portfolio, portf
                     </div>
                     <div className='categoria' >
                         <button
-                            onMouseEnter={() => setIsHovered(!isHovered)}
+                            onClick={() => {setIsHovered(!isHovered); setIsHoveredInd(false)}}
                         >Por Categoría</button>
-                        <button  className={isHovered ? 'listaCategoria' : 'listaCategoria active'}
-                            onMouseLeave={() => setIsHovered(!isHovered)}
+                        <button  className={isHovered ? 'listaCategoria active' : 'listaCategoria'}
                         >
                             {categorias.edges.map(({node}) => {
                                 return(
@@ -44,10 +43,9 @@ export default function SingleIndustriaPage({data: { industria, portfolio, portf
                     </div>
                     <div className='industria'>
                         <button
-                            onMouseEnter={() => setIsHoveredInd(!isHoveredInd)}
+                            onClick={() => {setIsHoveredInd(!isHoveredInd); setIsHovered(false)}}
                         >Por Industria</button>
-                        <button  className={isHoveredInd ? 'listaCategoria' : 'listaCategoria active'}
-                            onMouseLeave={() => setIsHoveredInd(!isHoveredInd)}
+                        <button  className={isHoveredInd ? 'listaCategoria active' : 'listaCategoria'}
                         >
                             {industrias.edges.map(({node}) => {
                                 return(
@@ -100,7 +98,7 @@ const PortfolioContainer = styled.section`
     .top {
         display: flex;
         width: 100%;
-        border-top: solid 1px white;
+        border-top: solid 1px rgba(255, 255, 255, 0.3);
         padding-top: 50px;
         @media (max-width: 680px) {
             flex-direction: column;
@@ -147,6 +145,7 @@ const PortfolioContainer = styled.section`
             h4 {
                 margin-left: 5px;
                 font-size: 0.875rem;
+                font-family: var(--bold);
             }
         }
         .categoria {
@@ -160,26 +159,32 @@ const PortfolioContainer = styled.section`
             }
             .listaCategoria {
                 position: absolute;
-                top: 0px;
+                top: 30px;
                 left: 0;
                 background-color: white;
                 color: black;
                 padding: 5px;
                 display: none;
+                border-radius: 3px;
                 div {
                     padding: 5px;
-                    border-bottom: solid 1px black;
+                    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
                     display: block;
                     width: 200px;
+                    text-align: left;
+                    &:hover {
+                        border-bottom: solid 1px rgba(0, 0, 0, 1);
+                    }
+                    a {
+                        font-family: var(--bold);
+                    }
 
                 }
             }
             button {
                 font-size: 0.875rem;
                 color: rgba(255, 255, 255, 0.7);
-                &:hover {
-                    color: rgba(0, 0, 0, 1);
-                }
+                font-family: var(--bold);
             }
         }
         .dot {
@@ -348,7 +353,7 @@ export const query = graphql`
                             gatsbyImageData(
                                 layout: FULL_WIDTH
                                 outputPixelDensities: 1.5
-                                placeholder: DOMINANT_COLOR
+                                placeholder: NONE
                             )
                         }
                     }

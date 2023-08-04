@@ -84,7 +84,7 @@ const FormularioContainer = styled.section`
     .top {
         display: flex;
         width: 100%;
-        border-top: solid 1px white;
+        border-top: solid 1px rgba(255, 255, 255, 0.3);
         padding-top: 50px;
         @media (max-width: 750px) {
             flex-direction: column;

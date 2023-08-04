@@ -33,7 +33,7 @@ export const data = graphql`
               gatsbyImageData(
                 layout: FULL_WIDTH
                 outputPixelDensities: 1.5
-                placeholder: DOMINANT_COLOR
+                placeholder: NONE
               )
             }
           }

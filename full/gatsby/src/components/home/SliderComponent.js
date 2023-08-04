@@ -105,7 +105,7 @@ const SliderContainer = styled.section`
         padding: 0 20px;
     }
     .slider {
-        border-top: solid 1px white;
+        border-top: solid 1px rgba(255, 255, 255, 0.3);
         .top {
             display: flex;
             width: 100%;

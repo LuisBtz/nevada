@@ -280,6 +280,7 @@ nav {
     display: flex;
     justify-content: space-between;
     max-width: 1400px;
+    padding: 0 50px;
     margin: 0 auto;
     h2 {
       font-size: 0.875rem;
@@ -350,8 +351,10 @@ nav {
   .bottom {
     max-width: 1400px;
     margin: 150px auto 0;
+    padding: 0 50px;
     @media (max-width: 680px) {
       text-align: center;
+      padding: 0;
       span {
         font-size: 1.2rem !important;
       }

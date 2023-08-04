@@ -53,11 +53,12 @@ const MarqueeSection = styled.section`
         animation: marquee-x 25s linear 0s infinite normal none running ;
         .marquee__content--item {
             display: inline;
-            padding: 10px;
-            border: solid 1px white;
-            border-radius: 5px;
+            padding: 8px 10px;
+            border: solid 1px rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
             text-align: center;
-            margin-right: 20px;
+            margin-right: 10px;
+            font-family: var(--bold);
           
         }
     }

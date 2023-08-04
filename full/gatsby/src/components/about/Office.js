@@ -62,7 +62,7 @@ padding: 100px 50px;
     .top {
         display: flex;
         width: 100%;
-        border-top: solid 1px white;
+        border-top: solid 1px rgba(255, 255, 255, 0.3);
         padding-top: 50px;
         margin-bottom: 30px;
         @media (max-width: 750px) {

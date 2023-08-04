@@ -61,7 +61,7 @@ padding: 0 50px;
     .info {
         padding-top: 100px;
         padding-bottom: 100px;
-        border-top: solid 1px white;
+        border-top: solid 1px rgba(255, 255, 255, 0.3);
         text-align: center;
         h2 {
             font-size: 0.875rem;
