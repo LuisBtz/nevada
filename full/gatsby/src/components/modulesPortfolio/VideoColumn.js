@@ -19,18 +19,12 @@ const VideoColumnContainer = styled.section`
 margin-top: 20px;
 margin-bottom: 20px;
     .video {
-        position:relative;
-        padding-bottom:56.25%; /* aspect ration for 16:9 */
-        /*padding-top: 20px;*/ /* you can add padding-top if needed */
-        height:0;
+        aspect-ratio: 3 / 2;
         overflow:hidden;
         iframe {
-            position:absolute;
-            top:0;
-            left:0;
             width:100%;
             height:100%;
-            scale: 1.3;
+            scale: 1.1;
         }
     }
 `
