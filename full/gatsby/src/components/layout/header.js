@@ -71,7 +71,6 @@ const Header = ({indexTrue}) => {
 
 
 
-      console.log(indexTrue)
     return(
         <HeaderContainer>
           <div style={indexTrue === true ? {display: 'block'} : {display: 'none'} } className={navOpen ? " intro hide" : " intro"}>

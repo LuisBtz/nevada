@@ -16,22 +16,21 @@ const Equipo = ({data}) => {
                 <h3>{data.sanityAboutPage.equipoTitulo && data.sanityAboutPage.equipoTitulo.esString}</h3>
             </div>
             <ul className="equipo">
-                {data.sanityAboutPage.equipo.map(({ name, photo, puesto, _key }) => {
-                        const imageOneGatsby = getImage(photo.asset);
-                        const bgGetDataImageAlt = photo.asset.altText;
+                {data.sanityAboutPage.equipo.map(( equipoAsset ) => {
                     
                             return (
-                                <li key={_key}>
+                                <li key={equipoAsset._key}>
+
                                     <div className="image">
                                         <GatsbyImage
                                             style={{ height: "100%", width: "100%" }}
-                                            image={imageOneGatsby}
-                                            alt={bgGetDataImageAlt}
+                                            image={getImage(equipoAsset.photo && equipoAsset.photo.asset)}
+                                            alt={equipoAsset.photo && equipoAsset.photo.asset.altText}
                                         />
                                     </div>
                                     <div className="datos">
-                                        <h3>{name}</h3>
-                                        <h4>{puesto}</h4>
+                                        <h3>{equipoAsset.name}</h3>
+                                        <h4>{equipoAsset.puesto}</h4>
                                     </div>
                                 </li>
                             )
