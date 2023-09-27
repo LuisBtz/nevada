@@ -4,8 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Equipo = ({data}) => {
 
-    const imageIlustration = getImage(data.sanityAboutPage.imagenFinal.asset);
-    const imageIlustrationAlt = data.sanityAboutPage.imagenFinal.textoAlternativo.esString;
+    const imageIlustration = getImage(data.sanityAboutPage.imagenFinal && data.sanityAboutPage.imagenFinal.asset);
+    const imageIlustrationAlt = data.sanityAboutPage.imagenFinal && data.sanityAboutPage.imagenFinal.textoAlternativo && data.sanityAboutPage.imagenFinal.textoAlternativo.esString;
 
 
 
