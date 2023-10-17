@@ -51,7 +51,7 @@ const Formulario = ({data}) => {
                         <form 
                             name="Formulario Contacto Ingles" 
                             netlify
-                            action="/thank-you"
+                            // action="/thank-you"
                             method="POST" 
                             data-netlify="true"
                         >
