@@ -50,6 +50,7 @@ const Formulario = ({data}) => {
                     <div className="form">
                         <form 
                             name="Formulario Contacto" 
+                            netlify
                             action="/thank-you"
                             method="POST" 
                             data-netlify="true"
