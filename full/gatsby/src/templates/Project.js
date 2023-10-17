@@ -327,7 +327,7 @@ padding: 140px 50px 0px;
  `
 
 
-export const Head = () => (
-    <Seo title='Nevada Projects' description='Full website soon' image='/screenshot.png' />
+export const Head = ({ data: { project } }) => (
+    <Seo title={`Nevada Projects | ${project.title}`} description={`Estudio de Diseño & Arte`} image='/screenshot.png' />
     )
   

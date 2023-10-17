@@ -106,7 +106,7 @@ const AboutPageEn = ({data}) => {
 
 
 export const Head = () => (
-  <Seo title='Nevada Projects' description='Full website soon' image='/screenshot.png' />
+  <Seo title='Nevada Projects | About' description='Estudio de Diseño & Arte' image='/screenshot.png' />
   )
 
 

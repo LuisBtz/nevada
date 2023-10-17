@@ -1,22 +1,22 @@
 import React from "react";
-import Layout from '../../components/en/layout/layout'
-import { Seo } from '../../components/en/layout/seo';
+import Layout from '../components/layout/layout'
+import { Seo } from '../components/layout/seo';
 import { graphql } from 'gatsby'
-import FormularioThankYou from "../../components/en/contact/FormularioThankYou";
+import FormularioThankyou from "../components/contact/FormularioThankyou";
 
 
 export const data = graphql`
   query {
     sanityContactPage {
       textoPortfolio {
-        enString
+        esString
       }
       texto2Portfolio {
-        enString
+        esString
       }
       imagenFinal {
         textoAlternativo {
-          enString
+          esString
         }
         asset {
           gatsbyImageData(
@@ -53,7 +53,7 @@ const ContactPage = ({data}) => {
 
   return (
     <Layout idex={index}>
-        <FormularioThankYou data={data} />
+        <FormularioThankyou data={data} />
     </Layout>
   )
 
@@ -62,7 +62,7 @@ const ContactPage = ({data}) => {
 
 
 export const Head = () => (
-  <Seo title='Nevada Projects | Contact' description='Estudio de Diseño & Arte' image='/screenshot.png' />
+  <Seo title='Nevada Projects | Thank You' description='Estudio de Diseño & Arte' image='/screenshot.png' />
   )
 
 

@@ -86,7 +86,7 @@ const PortfolioPage = ({data}) => {
 
 
 export const Head = () => (
-  <Seo title='Portfolio | Nevada Projects' description='Full website soon' image='/screenshot.png' />
+  <Seo title='Nevada Projects | Porfolio' description='Estudio de Diseño & Arte' image='/screenshot.png' />
   )
 
 
