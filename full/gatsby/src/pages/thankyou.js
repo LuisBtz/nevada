@@ -47,7 +47,7 @@ export const data = graphql`
 
 
 
-const ContactPage = ({data}) => {
+const ThankyouPage = ({data}) => {
 
   const index = false;
 
@@ -67,4 +67,4 @@ export const Head = () => (
 
 
 
-  export default ContactPage
+  export default ThankyouPage
