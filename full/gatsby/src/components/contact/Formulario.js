@@ -49,19 +49,12 @@ const Formulario = ({data}) => {
                     <h2>{data.sanityContactPage.texto2Portfolio.esString}</h2>
                     <div className="form">
                         <form 
-                            name="contact-form-es" 
-                            id='contact-form-es'
-                            action="/thank-you"
-                            method="POST" 
+                            name='Formulario Contacto'
+                            method="POST"
                             data-netlify="true"
-                            data-netlify-honeypot="bot-field"
+                            action="/thank-you"
                         >
-                            <input type="hidden" name="form-name" value="contact-form-es" />
-                            <p class="hidden">
-                                <label>
-                                Don't fill this out if you're human: <input name="bot-field" />
-                                </label>
-                            </p>
+                            <input type="hidden" name="form-name" value="Formulario Contacto"></input>
                             <input type='text' name='nombre' placeholder='Nombre' />
                             <input type='email' name='email' placeholder='Correo electrónico' required />
                             <input type='text' name='company' placeholder='Compañía' required />
