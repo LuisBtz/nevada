@@ -54,7 +54,6 @@ const Formulario = ({data}) => {
                             method="POST" 
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
-                            data-netlify-recaptcha="true"
                         >
                             <input type="hidden" name="form-name" value="Form En" />
                             <p class="hidden">
@@ -65,7 +64,7 @@ const Formulario = ({data}) => {
                             <input type='text' name='name' placeholder='Name' />
                             <input type='email' name='email' placeholder='E-Mail' required />
                             <input type='text' name='company' placeholder='Company' required />
-                            <textarea name='message' placeholder='Tell us about your project' ></textarea>
+                            <textarea type='text' name='message' placeholder='Tell us about your project' ></textarea>
                             <button type='submit'>Send<img src="/enviar.svg" alt="Send button" /></button>
                         </form>
                     </div>
