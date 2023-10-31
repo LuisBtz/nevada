@@ -51,6 +51,7 @@ const Formulario = ({data}) => {
                         <form 
                             name='Formulario Contacto'
                             method="POST"
+                            netlify
                             data-netlify="true"
                             action="/thankyou"
                         >
