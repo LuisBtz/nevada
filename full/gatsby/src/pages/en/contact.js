@@ -2,7 +2,6 @@ import React from "react";
 import Layout from '../../components/en/layout/layout'
 import { Seo } from '../../components/en/layout/seo';
 import { graphql } from 'gatsby'
-import FormularioThankYou from "../../components/en/contact/FormularioThankYou";
 import Formulario from "../../components/en/contact/Formulario";
 
 

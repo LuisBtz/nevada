@@ -50,9 +50,7 @@ const Formulario = ({data}) => {
                     <form 
                             name='Contact Form'
                             method="POST"
-                            netlify
                             data-netlify="true"
-                            action="/thankyou"
                         >
                             <input type="hidden" name="form-name" value="Contact Form" />
                             <input type='text' name='nombre' placeholder='Nombre' />
