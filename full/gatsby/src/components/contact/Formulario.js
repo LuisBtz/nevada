@@ -49,13 +49,13 @@ const Formulario = ({data}) => {
                     <h2>{data.sanityContactPage.texto2Portfolio.esString}</h2>
                     <div className="form">
                         <form 
-                            name='Formulario Contacto'
+                            name='Contact Form'
                             method="POST"
                             netlify
                             data-netlify="true"
                             action="/thankyou"
                         >
-                            <input type="hidden" name="form-name" value="Formulario Contacto"></input>
+                            <input type="hidden" name="form-name" value="Contact Form" />
                             <input type='text' name='nombre' placeholder='Nombre' />
                             <input type='email' name='email' placeholder='Correo electrónico' required />
                             <input type='text' name='company' placeholder='Compañía' required />
