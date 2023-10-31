@@ -3,6 +3,7 @@ import Layout from '../../components/en/layout/layout'
 import { Seo } from '../../components/en/layout/seo';
 import { graphql } from 'gatsby'
 import FormularioThankYou from "../../components/en/contact/FormularioThankYou";
+import Formulario from "../../components/en/contact/Formulario";
 
 
 export const data = graphql`
@@ -53,7 +54,7 @@ const ContactPage = ({data}) => {
 
   return (
     <Layout idex={index}>
-        <FormularioThankYou data={data} />
+        <Formulario data={data} />
     </Layout>
   )
 

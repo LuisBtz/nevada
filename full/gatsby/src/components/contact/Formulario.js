@@ -47,8 +47,7 @@ const Formulario = ({data}) => {
                 <div className='de'>
                     <h1>{data.sanityContactPage.textoPortfolio.esString}</h1>
                     <h2>{data.sanityContactPage.texto2Portfolio.esString}</h2>
-                    <div className="form">
-                        <form 
+                    <form 
                             name='Contact Form'
                             method="POST"
                             netlify
@@ -62,7 +61,6 @@ const Formulario = ({data}) => {
                             <textarea type='text' name='message' placeholder='Cuéntanos sobre tu proyecto' ></textarea>
                             <button type='submit'>Enviar<img src="/enviar.svg" alt="Botón Enviar" /></button>
                         </form>
-                    </div>
                 </div>
             </div>
         </FormularioContainer>

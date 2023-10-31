@@ -47,22 +47,20 @@ const Formulario = ({data}) => {
                 <div className='de'>
                     <h1>{data.sanityContactPage.textoPortfolio.enString}</h1>
                     <h2>{data.sanityContactPage.texto2Portfolio.enString}</h2>
-                    <div className="form">
-                        <form 
-                            name='Formulario Contacto'
+                    <form 
+                            name='Contact Form'
                             method="POST"
                             data-netlify="true"
                             netlify
                             action="/thankyou"
                         >
-                            <input type="hidden" name="form-name" value="Formulario Contacto"></input>
+                            <input type="hidden" name="form-name" value="Contact Form" />
                             <input type='text' name='name' placeholder='Name' />
                             <input type='email' name='email' placeholder='E-Mail' required />
                             <input type='text' name='company' placeholder='Company' required />
                             <textarea type='text' name='message' placeholder='Tell us about your project' ></textarea>
                             <button type='submit'>Send<img src="/enviar.svg" alt="Send button" /></button>
                         </form>
-                    </div>
                 </div>
             </div>
         </FormularioContainer>
