@@ -24,7 +24,7 @@ const Office = ({data}) => {
         <OfficeContainer>
             <div className='top'>
                 <div className='iz'>
-                    <h2>{data.sanityAboutPage.oficinasTitulo.esString}</h2>
+                    <h2>{data.sanityAboutPage.oficinasTitulo.enString}</h2>
                 </div>
                 <div className='de'>
                     <p>CDMX <span>{hours > 12 ? hours - 12 : hours}<i>:</i>{minute < 10 ? '0' + minute : minute} {hours > 11 ? 'PM' : 'AM'}</span></p>

@@ -54,8 +54,8 @@ const Formulario = ({data}) => {
                         >
                             <input type="hidden" name="form-name" value="Contact Form" />
                             <input type='text' name='nombre' placeholder='Nombre' />
-                            <input type='email' name='email' placeholder='Correo electrónico' required />
-                            <input type='text' name='company' placeholder='Compañía' required />
+                            <input type='email' name='email' placeholder='Correo electrónico' />
+                            <input type='text' name='company' placeholder='Compañía' />
                             <textarea type='text' name='message' placeholder='Cuéntanos sobre tu proyecto' ></textarea>
                             <button type='submit'>Enviar<img src="/enviar.svg" alt="Botón Enviar" /></button>
                         </form>
