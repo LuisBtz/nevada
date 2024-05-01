@@ -15,7 +15,7 @@ export const data = graphql`
         esString
       }
     }
-    allSanityPostPage {
+    allSanityPostPage(sort: {_updatedAt: DESC}) {
       edges {
         node {
           title

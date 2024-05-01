@@ -66,7 +66,7 @@ export const data = graphql`
     }
 
 
-    allSanityPostPage(limit: 11) {
+    allSanityPostPage(limit: 11, sort: {_updatedAt: DESC}) {
       edges {
         node {
           title

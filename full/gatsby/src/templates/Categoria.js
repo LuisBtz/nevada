@@ -236,20 +236,30 @@ const PortfolioContainer = styled.section`
                 }
                 &:nth-child(11n - 10) {
                     grid-column: 1 / 5;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 9) {
-                    grid-column: 1 / 5;
-                    grid-row: 2/3;
+                    grid-column: 5 / 9;
+                    grid-row: span 2;
+                    display: flex;
+                    flex-flow: column;
+                    height: 100%;
+                    .image {
+                        flex: 1 auto;
+                    }
+                    .info {
+                        flex: 0 auto;
+                    }
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 8) {
-                    grid-column: 5 / 9;
-                    grid-row: 1/3;
+                    grid-column: 9 / 13;
+                    grid-row: span 1;
                     display: flex;
                     flex-flow: column;
                     height: 100%;
@@ -261,43 +271,43 @@ const PortfolioContainer = styled.section`
                     }
                 }
                 &:nth-child(11n - 7) {
-                    grid-column: 9 / 13;
-                    grid-row: 1/2;
+                    grid-column: 1 / 5;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 6) {
                     grid-column: 9 / 13;
-                    grid-row: 2/3;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 5) {
                     grid-column: 1 / 5;
-                    grid-row: 3/4;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 4) {
                     grid-column: 5 / 9;
-                    grid-row: 3/4;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 3) {
                     grid-column: 9 / 13;
-                    grid-row: 3/4;
+                    grid-row: span 1;
                     .image {
                         height: 250px;
                     }
                 }
                 &:nth-child(11n - 2) {
                     grid-column: 1 / 9;
-                    grid-row: 4/6;
+                    grid-row: span 2;
                     display: flex;
                     flex-flow: column;
                     height: 100%;
@@ -310,13 +320,13 @@ const PortfolioContainer = styled.section`
                 }
                 &:nth-child(11n - 1) {
                     grid-column: 9 / 13;
-                    grid-row: 4/5;
+                    grid-row: span 1;
                     .image {
                     }
                 }
                 &:nth-child(11n) {
                     grid-column: 9 / 13;
-                    grid-row: 5/6;
+                    grid-row: span 1;
                     .image {
                     }
                 }
