@@ -124,9 +124,8 @@ const IndexPage = ({data}) => {
 
   const indexTrue = true;
 
-
   return (
-    <Layout indexTrue={indexTrue} >
+    <Layout indexTrue={indexTrue}>
         <Video data={data} />
         <Portfolio data={data} />
         <Servicios data={data.sanityHomePage} />
@@ -142,6 +141,4 @@ export const Head = () => (
   <Seo title='Nevada Projects' description='Estudio de Diseño & Arte' image='/screenshot.png' />
   )
 
-
-
-  export default IndexPage
+export default IndexPage

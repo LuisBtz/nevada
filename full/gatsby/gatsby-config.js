@@ -33,5 +33,22 @@ module.exports = {
       token: process.env.SANITY_TOKEN,
     },
   },
+  {
+    resolve: "gatsby-plugin-google-tagmanager",
+    options: {
+      id: "GTM-MZMJ6N3C",
+      includeInDevelopment: false,
+      /*
+      defaultDataLayer: { platform: "gatsby" },
+      gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+      gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+      dataLayerName: "YOUR_DATA_LAYER_NAME",
+      routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
+      enableWebVitalsTracking: true,
+      selfHostedOrigin: "YOUR_SELF_HOSTED_ORIGIN",
+      selfHostedPath: "YOUR_SELF_HOSTED_PATH",
+      */
+    },
+  },
 ]
 };
