@@ -18,7 +18,7 @@ function Layout({ children, indexTrue }) {
       <Header indexTrue={indexTrue} />
       <main >{children}</main>
       <Footer />
-      <WhatsAppLink href="https://wa.me/+528131969037" target="_blank" rel="noopener noreferrer">
+      <WhatsAppLink href="https://wa.me/+528110773013" target="_blank" rel="noopener noreferrer">
         <WhatsAppIcon src={whatsappIcon} alt="WhatsApp" />
       </WhatsAppLink>
     </>
